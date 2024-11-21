@@ -1,4 +1,5 @@
 # See https://medium.com/@emafzal/how-to-install-apache-airflow-using-docker-compose-8c44233cbeea
+# This file does not start airflow successfully, but I am keeping it for future reference
 version: '3'
 services:
   postgres:
@@ -28,6 +29,7 @@ services:
       - postgres
       - redis
   
+  # http://localhost:8080
   airflow-webserver:
     image: apache/airflow:2.3.0
     ports:
